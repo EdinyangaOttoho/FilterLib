@@ -21,7 +21,7 @@ To make use of the package, include the FilterLib.js file into the HTML Page you
         
 Each of the methods above take two parameters except the pushFile, contrast and brightness. In order to use the gray, sepia etc methods, we will take a look at two examples. The library also provides you with a simplified way to reference the document.getElementById() function property. Consider the code blocks below;
 
-#### Using gray
+#### Using gray (It takes two arguments)
 
 ````html
 <html>
@@ -32,7 +32,66 @@ Each of the methods above take two parameters except the pushFile, contrast and 
       <script type="text/javascript">
           var filter = new FilterLib();
           var contents = filter.gray($$("img"), $$("canvas"));
+          var upload = pushFile(contents, "./pathto/ZuckLib.php");
       </script>
   </body>
 </html>
 ````
+
+
+#### Using sepia (It takes two arguments)
+
+````html
+<html>
+  <body>
+      <img id="img" src="photo.jpg" width="80" height="80">
+      <canvas id="canvas" width="80" height="80"></canvas>
+      <script src="./pathto/ZuckLib.js"></script>
+      <script type="text/javascript">
+          var filter = new FilterLib();
+          var contents = filter.sepia($$("img"), $$("canvas"));
+          var upload = pushFile(contents, "./pathto/ZuckLib.php");
+      </script>
+  </body>
+</html>
+````
+Having achieved the following code blocks, the pushFile() method returns the successfully uploaded (generated) file name, which could be utilized for further requests.
+
+#### Using brightness(It takes three arguments);
+
+````html
+<html>
+  <body>
+      <img id="img" src="photo.jpg" width="80" height="80">
+      <canvas id="canvas" width="80" height="80"></canvas>
+      <script src="./pathto/ZuckLib.js"></script>
+      <script type="text/javascript">
+          var filter = new FilterLib();
+          var contents = filter.brightness($$("img"), $$("canvas"), 50);
+          var upload = pushFile(contents, "./pathto/ZuckLib.php");
+      </script>
+  </body>
+</html>
+````
+
+#### Using contrast (It takes three arguments);
+
+````html
+<html>
+  <body>
+      <img id="img" src="photo.jpg" width="80" height="80">
+      <canvas id="canvas" width="80" height="80"></canvas>
+      <script src="./pathto/ZuckLib.js"></script>
+      <script type="text/javascript">
+          var filter = new FilterLib();
+          var contents = filter.contrast($$("img"), $$("canvas"), 50);
+          var upload = pushFile(contents, "./pathto/ZuckLib.php");
+      </script>
+  </body>
+</html>
+````
+
+From the code above, you can see that the contrast() and brightness() methods have a third argument which represents the percentage brightness and ranges from 0 to 100 percent. Same applies to the third argument of the contrast() method;
+
+## Support/Issues
+Report any usage issues or make suggestions to +2348117093601 or elzucky@gmail.com
