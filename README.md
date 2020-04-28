@@ -91,7 +91,20 @@ Having achieved the following code blocks, the pushFile() method returns the suc
 </html>
 ````
 
-From the code above, you can see that the contrast() and brightness() methods have a third argument which represents the percentage brightness and ranges from 0 to 100 percent. Same applies to the third argument of the contrast() method;
+From the code above, you can see that the contrast() and brightness() methods have a third argument which represents the percentage brightness and ranges from 0 to 100 percent. Same applies to the third argument of the contrast() method. The intended purpose for the canvas element is to have a preview of the filter applied to each image.
+
+**Note:** The Library has to fall into the body's onload function or any other event. It must not lie on the global JS scope. For instance;
+````js
+  $$("element").onclick = function() {
+      //Using the library's inbuilt reference;
+  }
+````
+OR
+````js
+  document.getElementById("element") = function() {
+    //Using JS's default reference;
+  }
+````
 
 ## Support/Issues
 Report any usage issues or make suggestions to +2348117093601 or elzucky@gmail.com
