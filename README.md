@@ -102,7 +102,7 @@ From the code above, you can see that the contrast() and brightness() methods ha
 OR
 ````js
   document.getElementById("element").onclick = function() {
-    //Using JS's default reference;
+      //Using JS's default reference;
   }
 ````
 
